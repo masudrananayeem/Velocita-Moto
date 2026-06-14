@@ -1,0 +1,338 @@
+
+/* ==========================
+   GOOGLE FONT RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   PAGE HEADER
+========================== */
+
+.collection-section{
+    padding:100px 0;
+}
+
+.page-title{
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    font-weight:600;
+
+    color:#fff;
+
+    margin-bottom:15px;
+}
+
+.page-subtitle{
+    text-align:center;
+
+    color:#bcbcbc;
+
+    font-size:1rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:70px;
+}
+
+/* ==========================
+   CARD DESIGN
+========================== */
+
+.car-card{
+
+    background:#0b0b0b;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    height:100%;
+
+    transition:.5s ease;
+
+    position:relative;
+}
+
+.car-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:rgba(255,255,255,.25);
+
+    box-shadow:
+    0 20px 40px rgba(255,255,255,.06);
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.car-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.car-card:hover img{
+
+    transform:scale(1.08);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.card-content{
+
+    padding:30px;
+}
+
+.card-content h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.card-content p{
+
+    color:#c8c8c8;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.read-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    text-decoration:none;
+
+    color:white;
+
+    letter-spacing:2px;
+
+    font-size:.85rem;
+
+    position:relative;
+}
+
+.read-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:1px;
+
+    background:white;
+
+    transition:.4s;
+}
+
+.read-btn:hover::after{
+
+    width:100%;
+}
+
+/* ==========================
+   PREMIUM LIGHT EFFECT
+========================== */
+
+.car-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+    transition:.8s;
+}
+
+.car-card:hover::before{
+
+    left:120%;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0a0a0a;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#333;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#666;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .page-title{
+
+        font-size:3.5rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .page-title{
+
+        font-size:2.7rem;
+    }
+
+    .page-subtitle{
+
+        padding:0 20px;
+    }
+
+    .card-content h3{
+
+        font-size:1.8rem;
+    }
+
+    .car-card img{
+
+        height:220px;
+    }
+}
+
+/* ==========================
+   FASTEST CARS SECTION
+========================== */
+
+.fastest-cars-section{
+    padding:120px 0;
+    background:#050505;
+}
+
+.fastest-title{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:4.5rem;
+    color:white;
+    margin-bottom:15px;
+}
+
+.fastest-subtitle{
+    text-align:center;
+    color:#bdbdbd;
+    letter-spacing:2px;
+    margin-bottom:70px;
+}
+
+.fastest-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.fastest-card{
+    background:#0c0c0c;
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.fastest-card:hover{
+    transform:translateY(-10px);
+    border-color:#c9a227;
+
+    box-shadow:
+    0 15px 40px rgba(201,162,39,.15);
+}
+
+.fastest-card span{
+    display:block;
+
+    font-size:3rem;
+
+    color:#c9a227;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:15px;
+}
+
+.fastest-card h3{
+    color:white;
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+.fastest-card p{
+    color:#bdbdbd;
+}
