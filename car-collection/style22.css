@@ -1,338 +1,761 @@
+/* ========================== */
+/* GOOGLE FONT RESET */
+/* ========================== */
 
-/* ==========================
-   GOOGLE FONT RESET
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#050505;
-    color:#fff;
-    font-family:'Montserrat',sans-serif;
-    overflow-x:hidden;
+body {
+    background: #050505;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
-/* ==========================
-   PAGE HEADER
-========================== */
+/* ========================== */
+/* SECTION HEADER */
+/* ========================== */
 
-.collection-section{
-    padding:100px 0;
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
 }
 
-.page-title{
-    text-align:center;
-
-    font-family:'Cormorant Garamond',serif;
-    font-size:5rem;
-    font-weight:600;
-
-    color:#fff;
-
-    margin-bottom:15px;
+.section-tag {
+    display: inline-block;
+    background: rgba(201, 162, 39, 0.12);
+    border: 1px solid rgba(201, 162, 39, 0.2);
+    color: #c9a227;
+    padding: 6px 25px;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-bottom: 15px;
 }
 
-.page-subtitle{
-    text-align:center;
-
-    color:#bcbcbc;
-
-    font-size:1rem;
-
-    letter-spacing:2px;
-
-    margin-bottom:70px;
+.header-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a227, transparent);
+    margin: 20px auto 0;
 }
 
-/* ==========================
-   CARD DESIGN
-========================== */
+/* ========================== */
+/* PAGE HEADER */
+/* ========================== */
 
-.car-card{
-
-    background:#0b0b0b;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    overflow:hidden;
-
-    height:100%;
-
-    transition:.5s ease;
-
-    position:relative;
+.collection-section {
+    padding: 100px 0 80px;
 }
 
-.car-card:hover{
-
-    transform:translateY(-12px);
-
-    border-color:rgba(255,255,255,.25);
-
-    box-shadow:
-    0 20px 40px rgba(255,255,255,.06);
+.page-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
-/* ==========================
-   IMAGE
-========================== */
-
-.car-card img{
-
-    width:100%;
-
-    height:260px;
-
-    object-fit:cover;
-
-    transition:.6s;
+.page-title span {
+    color: #c9a227;
 }
 
-.car-card:hover img{
-
-    transform:scale(1.08);
+.page-subtitle {
+    text-align: center;
+    color: #bcbcbc;
+    font-size: 1rem;
+    letter-spacing: 2px;
 }
 
-/* ==========================
-   CONTENT
-========================== */
+/* ========================== */
+/* FILTER BUTTONS */
+/* ========================== */
 
-.card-content{
-
-    padding:30px;
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
 }
 
-.card-content h3{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2.2rem;
-
-    color:white;
-
-    margin-bottom:15px;
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888;
+    padding: 8px 22px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.card-content p{
-
-    color:#c8c8c8;
-
-    line-height:1.8;
-
-    font-size:.95rem;
+.filter-btn:hover {
+    border-color: #c9a227;
+    color: #fff;
 }
 
-/* ==========================
-   BUTTON
-========================== */
-
-.read-btn{
-
-    display:inline-block;
-
-    margin-top:20px;
-
-    text-decoration:none;
-
-    color:white;
-
-    letter-spacing:2px;
-
-    font-size:.85rem;
-
-    position:relative;
+.filter-btn.active {
+    background: #c9a227;
+    border-color: #c9a227;
+    color: #000;
+    font-weight: 600;
 }
 
-.read-btn::after{
+/* ========================== */
+/* CARD DESIGN */
+/* ========================== */
 
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:-6px;
-
-    width:0;
-
-    height:1px;
-
-    background:white;
-
-    transition:.4s;
+.car-card {
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, .06);
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    border-radius: 12px;
 }
 
-.read-btn:hover::after{
-
-    width:100%;
+.car-card:hover {
+    transform: translateY(-12px);
+    border-color: #c9a227;
+    box-shadow: 0 20px 50px rgba(201, 162, 39, .08);
 }
 
-/* ==========================
-   PREMIUM LIGHT EFFECT
-========================== */
-
-.car-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:-120%;
-
-    width:100%;
-    height:100%;
-
-    background:
-    linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.08),
-        transparent
-    );
-
-    transition:.8s;
+/* Card Image */
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
 }
 
-.car-card:hover::before{
-
-    left:120%;
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ==========================
-   SCROLLBAR
-========================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
+.car-card:hover .card-image img {
+    transform: scale(1.08);
 }
 
-::-webkit-scrollbar-track{
-
-    background:#0a0a0a;
+.card-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
 }
 
-::-webkit-scrollbar-thumb{
-
-    background:#333;
+.card-tag {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    color: #c9a227;
+    padding: 4px 16px;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: 1px solid rgba(201, 162, 39, 0.2);
 }
 
-::-webkit-scrollbar-thumb:hover{
-
-    background:#666;
+/* Card Content */
+.card-content {
+    padding: 25px 25px 20px;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+.card-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
 
-@media(max-width:992px){
+.car-card:hover .card-content h3 {
+    color: #c9a227;
+}
 
-    .page-title{
+.card-content p {
+    color: #c8c8c8;
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
 
-        font-size:3.5rem;
+/* Card Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+.card-country {
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.card-country i {
+    color: #c9a227;
+    margin-right: 6px;
+}
+
+.btn-explore-card {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-explore-card i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-explore-card:hover {
+    color: #c9a227;
+}
+
+.btn-explore-card:hover i {
+    transform: translateX(6px);
+}
+
+/* Premium Light Effect */
+.car-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .05), transparent);
+    transition: left 0.8s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.car-card:hover::before {
+    left: 120%;
+}
+
+/* ========================== */
+/* LOAD MORE BUTTON */
+/* ========================== */
+
+.btn-load-more {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 14px 40px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-load-more i {
+    margin-right: 10px;
+    color: #c9a227;
+}
+
+.btn-load-more:hover {
+    background: #c9a227;
+    border-color: #c9a227;
+    color: #000;
+}
+
+.btn-load-more:hover i {
+    color: #000;
+}
+
+/* ========================== */
+/* FASTEST CARS SECTION */
+/* ========================== */
+
+.fastest-cars-section {
+    padding: 100px 0 120px;
+    background: #050505;
+}
+
+.fastest-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.fastest-title span {
+    color: #c9a227;
+}
+
+.fastest-subtitle {
+    text-align: center;
+    color: #bdbdbd;
+    letter-spacing: 2px;
+}
+
+.fastest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.fastest-card {
+    background: #0c0c0c;
+    border: 1px solid rgba(255, 255, 255, .06);
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fastest-card:hover {
+    transform: translateY(-10px);
+    border-color: #c9a227;
+    box-shadow: 0 15px 50px rgba(201, 162, 39, .1);
+}
+
+.fastest-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c9a227, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fastest-card:hover::before {
+    opacity: 1;
+}
+
+.rank {
+    display: block;
+    font-size: 3rem;
+    color: #c9a227;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 10px;
+}
+
+.fastest-icon {
+    font-size: 2.5rem;
+    color: #c9a227;
+    margin-bottom: 15px;
+}
+
+.fastest-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.fastest-card p {
+    color: #bdbdbd;
+    font-size: 0.95rem;
+}
+
+.fastest-card p strong {
+    color: #c9a227;
+}
+
+.fastest-detail {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+.fastest-detail span {
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.fastest-detail i {
+    color: #c9a227;
+    margin-right: 5px;
+}
+
+/* ========================== */
+/* STATS COUNTER SECTION (NEW) */
+/* ========================== */
+
+.stats-counter-section {
+    padding: 80px 0;
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255, 255, 255, .04);
+    border-bottom: 1px solid rgba(255, 255, 255, .04);
+}
+
+.stats-counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.stat-counter-item {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: #c9a227;
+    font-weight: 700;
+    display: block;
+}
+
+.stat-label {
+    color: #888;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    display: block;
+}
+
+/* ========================== */
+/* BRAND SHOWCASE SECTION (NEW) */
+/* ========================== */
+
+.brand-showcase-section {
+    padding: 100px 0;
+    background: #050505;
+}
+
+.showcase-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.showcase-title span {
+    color: #c9a227;
+}
+
+.showcase-subtitle {
+    text-align: center;
+    color: #bdbdbd;
+    letter-spacing: 2px;
+}
+
+.brand-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.brand-logo-item {
+    background: #0c0c0c;
+    border: 1px solid rgba(255, 255, 255, .06);
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.brand-logo-item:hover {
+    transform: translateY(-8px);
+    border-color: #c9a227;
+    box-shadow: 0 10px 30px rgba(201, 162, 39, .08);
+}
+
+.brand-logo-item i {
+    font-size: 2rem;
+    color: #c9a227;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.brand-logo-item span {
+    color: #bdbdbd;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* ========================== */
+/* SCROLLBAR */
+/* ========================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c9a227;
+}
+
+/* ========================== */
+/* RESPONSIVE */
+/* ========================== */
+
+@media (max-width: 992px) {
+    .page-title {
+        font-size: 3.5rem;
+    }
+    
+    .fastest-title {
+        font-size: 3.5rem;
+    }
+    
+    .showcase-title {
+        font-size: 3rem;
+    }
+    
+    .stats-counter-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width:768px){
-
-    .page-title{
-
-        font-size:2.7rem;
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.7rem;
     }
-
-    .page-subtitle{
-
-        padding:0 20px;
+    
+    .fastest-title {
+        font-size: 2.7rem;
     }
-
-    .card-content h3{
-
-        font-size:1.8rem;
+    
+    .showcase-title {
+        font-size: 2.2rem;
     }
-
-    .car-card img{
-
-        height:220px;
+    
+    .page-subtitle {
+        padding: 0 20px;
+    }
+    
+    .card-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .card-image {
+        height: 220px;
+    }
+    
+    .fastest-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .fastest-detail {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .brand-logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .filter-buttons {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: 0.65rem;
     }
 }
 
-/* ==========================
-   FASTEST CARS SECTION
-========================== */
-
-.fastest-cars-section{
-    padding:120px 0;
-    background:#050505;
+@media (max-width: 576px) {
+    .fastest-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .brand-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-counter-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+    }
+    
+    .rank {
+        font-size: 2.5rem;
+    }
+    
+    .fastest-icon {
+        font-size: 2rem;
+    }
+    
+    .fastest-card h3 {
+        font-size: 1.3rem;
+    }
 }
 
-.fastest-title{
-    text-align:center;
-    font-family:'Cormorant Garamond',serif;
-    font-size:4.5rem;
-    color:white;
-    margin-bottom:15px;
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .fastest-title {
+        font-size: 2.2rem;
+    }
+    
+    .showcase-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .card-content {
+        padding: 18px 18px 15px;
+    }
+    
+    .card-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .section-tag {
+        font-size: 0.6rem;
+        padding: 4px 16px;
+    }
+    
+    .brand-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .filter-buttons {
+        gap: 6px;
+    }
+    
+    .filter-btn {
+        padding: 4px 12px;
+        font-size: 0.55rem;
+        letter-spacing: 1px;
+    }
 }
 
-.fastest-subtitle{
-    text-align:center;
-    color:#bdbdbd;
-    letter-spacing:2px;
-    margin-bottom:70px;
+/* ========================== */
+/* BACK TO HOME BUTTON */
+/* ========================== */
+
+.back-home-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: rgba(11, 11, 11, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 }
 
-.fastest-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+.back-home-btn i {
+    font-size: 1.1rem;
+    color: #c9a227;
+    transition: transform 0.4s ease;
 }
 
-.fastest-card{
-    background:#0c0c0c;
-    border:1px solid rgba(255,255,255,.08);
-
-    padding:40px 30px;
-
-    text-align:center;
-
-    transition:.4s;
+.back-home-btn span {
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-.fastest-card:hover{
-    transform:translateY(-10px);
-    border-color:#c9a227;
-
-    box-shadow:
-    0 15px 40px rgba(201,162,39,.15);
+.back-home-btn:hover {
+    background: #c9a227;
+    border-color: #c9a227;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(201, 162, 39, 0.25);
 }
 
-.fastest-card span{
-    display:block;
-
-    font-size:3rem;
-
-    color:#c9a227;
-
-    font-family:'Cormorant Garamond',serif;
-
-    margin-bottom:15px;
+.back-home-btn:hover i {
+    transform: translateX(-6px);
+    color: #000;
 }
 
-.fastest-card h3{
-    color:white;
-    font-size:1.5rem;
-    margin-bottom:15px;
+.back-home-btn:hover span {
+    color: #000;
 }
 
-.fastest-card p{
-    color:#bdbdbd;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .back-home-btn {
+        bottom: 20px;
+        left: 20px;
+        padding: 12px 22px;
+        font-size: 0.75rem;
+        gap: 10px;
+    }
+    
+    .back-home-btn i {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-home-btn {
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 18px;
+        font-size: 0.65rem;
+        gap: 8px;
+        border-radius: 40px;
+    }
+    
+    .back-home-btn i {
+        font-size: 0.8rem;
+    }
 }
