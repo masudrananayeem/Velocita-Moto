@@ -1103,69 +1103,66 @@ body.night-mode .custom-indicators button.active {
 }
 
 .brand-card {
-
     text-decoration: none;
-
-    color: white;
-
+    color: #111;
     padding: 30px;
-
     text-align: center;
-
-    border: 1px solid rgba(255, 255, 255, .1);
-
-    background: rgba(255, 255, 255, .03);
-
+    border: 1px solid rgba(0, 0, 0, .1);
+    background: rgba(255, 255, 255, .6);
     backdrop-filter: blur(10px);
-
     font-family: 'Montserrat', sans-serif;
-
     letter-spacing: 3px;
-
     transition: .4s;
-}
-
-.brand-card:hover {
-
-    transform: translateY(-10px);
-
-    color: white;
-
-    border-color: white;
-
-    background: rgba(255, 255, 255, .08);
-
-    box-shadow:
-        0 10px 30px rgba(255, 255, 255, .08);
-}
-
-.brand-card {
     position: relative;
     overflow: hidden;
+    
+    font-weight: 500;
+}
+
+/* Light Mode - Hover Effect (Golden) */
+.brand-card:hover {
+    transform: translateY(-10px);
+    color: #c9a227 !important;
+    border-color: #c9a227;
+    background: rgba(201, 162, 39, .08);
+    box-shadow: 0 10px 30px rgba(201, 162, 39, .12);
 }
 
 .brand-card::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: -100%;
-
     width: 100%;
     height: 100%;
-
-    background:
-        linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, .15),
-            transparent);
-
+    background: linear-gradient(90deg, transparent, rgba(201, 162, 39, .08), transparent);
     transition: .8s;
 }
 
 .brand-card:hover::before {
     left: 100%;
+}
+
+/* ========================================== */
+/* NIGHT MODE - Brand Cards */
+/* ========================================== */
+
+body.night-mode .brand-card {
+    color: #d0d0d0;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Night Mode - Hover Effect (White) */
+body.night-mode .brand-card:hover {
+    color: hsl(0, 0%, 100%) !important;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, .15);
+}
+
+body.night-mode .brand-card::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08), transparent);
 }
 
 /* DROPDOWN */
