@@ -9,237 +9,429 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style22.css">
 </head>
 
 <body>
 
-    <section class="collection-section">
+    <!-- ========================================== -->
+    <!-- COLLECTION SECTION -->
+    <!-- ========================================== -->
+    <section class="collection-section" data-aos="fade-up">
 
         <div class="container">
 
-            <h1 class="page-title">
-                Dream Car Collection
-            </h1>
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+                <span class="section-tag">✦ Premium Collection</span>
+                <h1 class="page-title">
+                    Dream Car <span>Collection</span>
+                </h1>
+                <p class="page-subtitle">
+                    Explore the world's most iconic automotive masterpieces.
+                </p>
+                <div class="header-divider"></div>
+            </div>
 
-            <p class="page-subtitle">
-                Explore the world's most iconic automotive brands.
-            </p>
+            <!-- Filter Buttons -->
+            <div class="filter-buttons" data-aos="fade-up" data-aos-delay="150">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="hypercar">Hypercar</button>
+                <button class="filter-btn" data-filter="supercar">Supercar</button>
+                <button class="filter-btn" data-filter="luxury">Luxury</button>
+                <button class="filter-btn" data-filter="performance">Performance</button>
+                <button class="filter-btn" data-filter="american">American</button>
+                <button class="filter-btn" data-filter="japanese">Japanese</button>
+            </div>
 
-            <div class="row g-4">
+            <div class="row g-4" id="carGrid">
 
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 1 - Toyota (Japanese) -->
+                <div class="col-lg-4 col-md-6" data-category="japanese" data-aos="flip-up" data-aos-delay="100">
                     <div class="car-card">
-                        <img src="img/card-img/img1.jpg" alt="Toyota">
+                        <div class="card-image">
+                            <img src="img/card-img/img1.jpg" alt="Toyota">
+                            <div class="card-overlay">
+                                <span class="card-tag">Reliability</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Toyota</h3>
-                            <p>World's largest automobile manufacturers with legendary reliability.</p>
+                            <p>World's largest automobile manufacturer with legendary reliability and innovation.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Japan</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 2 - BMW (Performance) -->
+                <div class="col-lg-4 col-md-6" data-category="performance" data-aos="flip-up" data-aos-delay="150">
                     <div class="car-card">
-                        <img src="img/card-img/img2.jpg" alt="BMW">
+                        <div class="card-image">
+                            <img src="img/card-img/img2.jpg" alt="BMW">
+                            <div class="card-overlay">
+                                <span class="card-tag">Performance</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>BMW</h3>
-                            <p>German engineering excellence focused on luxury and performance.</p>
+                            <p>German engineering excellence focused on luxury, performance and driving pleasure.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Germany</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 3 - Bugatti (Hypercar) -->
+                <div class="col-lg-4 col-md-6" data-category="hypercar" data-aos="flip-up" data-aos-delay="200">
                     <div class="car-card">
-                        <img src="img/card-img/img3.jpg" alt="Bugatti">
+                        <div class="card-image">
+                            <img src="img/card-img/img3.jpg" alt="Bugatti">
+                            <div class="card-overlay">
+                                <span class="card-tag">Hypercar</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Bugatti</h3>
-                            <p>French hypercar manufacturer producing some of the fastest cars ever built.</p>
+                            <p>French hypercar manufacturer producing the fastest and most exclusive cars ever built.
+                            </p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> France</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 4 - Honda (Japanese) -->
+                <div class="col-lg-4 col-md-6" data-category="japanese" data-aos="flip-up" data-aos-delay="250">
                     <div class="car-card">
-                        <img src="img/card-img/img4.jpg" alt="Honda">
+                        <div class="card-image">
+                            <img src="img/card-img/img4.jpg" alt="Honda">
+                            <div class="card-overlay">
+                                <span class="card-tag">Innovation</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Honda</h3>
-                            <p>Innovation, efficiency and reliability combined in one global brand.</p>
+                            <p>Innovation, efficiency and reliability combined in one globally renowned brand.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Japan</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 5 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 5 - Jaguar (Luxury) -->
+                <div class="col-lg-4 col-md-6" data-category="luxury" data-aos="flip-up" data-aos-delay="300">
                     <div class="car-card">
-                        <img src="img/card-img/img5.jpg" alt="Jaguar">
+                        <div class="card-image">
+                            <img src="img/card-img/img5.jpg" alt="Jaguar">
+                            <div class="card-overlay">
+                                <span class="card-tag">Luxury</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Jaguar</h3>
-                            <p>British luxury vehicles blending elegance with performance.</p>
+                            <p>British luxury vehicles blending timeless elegance with thrilling performance.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> United Kingdom</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 6 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 6 - Mitsubishi (Japanese) -->
+                <div class="col-lg-4 col-md-6" data-category="japanese" data-aos="flip-up" data-aos-delay="350">
                     <div class="car-card">
-                        <img src="img/card-img/img6.jpg" alt="Mitsubishi">
+                        <div class="card-image">
+                            <img src="img/card-img/img6.jpg" alt="Mitsubishi">
+                            <div class="card-overlay">
+                                <span class="card-tag">Durable</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Mitsubishi</h3>
-                            <p>Japanese automotive giant known for innovation and durability.</p>
+                            <p>Japanese automotive giant known for innovation, durability and off-road capability.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Japan</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 7 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 7 - Hyundai (Performance) -->
+                <div class="col-lg-4 col-md-6" data-category="performance" data-aos="flip-up" data-aos-delay="400">
                     <div class="car-card">
-                        <img src="img/card-img/img7.jpg" alt="Hyundai">
+                        <div class="card-image">
+                            <img src="img/card-img/img7.jpg" alt="Hyundai">
+                            <div class="card-overlay">
+                                <span class="card-tag">Modern</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Hyundai</h3>
-                            <p>Global automotive leader delivering modern design and technology.</p>
+                            <p>Global automotive leader delivering modern design, technology and value.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> South Korea</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 8 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 8 - Lexus (Luxury) -->
+                <div class="col-lg-4 col-md-6" data-category="luxury" data-aos="flip-up" data-aos-delay="450">
                     <div class="car-card">
-                        <img src="img/card-img/img8.jpg" alt="Lexus">
+                        <div class="card-image">
+                            <img src="img/card-img/img8.jpg" alt="Lexus">
+                            <div class="card-overlay">
+                                <span class="card-tag">Refinement</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Lexus</h3>
-                            <p>Luxury division of Toyota renowned for comfort and refinement.</p>
+                            <p>Luxury division of Toyota renowned for comfort, refinement and hybrid innovation.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Japan</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 9 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 9 - Chevrolet (American) -->
+                <div class="col-lg-4 col-md-6" data-category="american" data-aos="flip-up" data-aos-delay="500">
                     <div class="car-card">
-                        <img src="img/card-img/img9.jpg" alt="Chevrolet">
+                        <div class="card-image">
+                            <img src="img/card-img/img9.jpg" alt="Chevrolet">
+                            <div class="card-overlay">
+                                <span class="card-tag">American</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Chevrolet</h3>
-                            <p>American automotive icon with a rich history of innovation.</p>
+                            <p>American automotive icon with a rich history of innovation and muscle car heritage.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> USA</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 10 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 10 - Ferrari (Supercar) -->
+                <div class="col-lg-4 col-md-6" data-category="supercar" data-aos="flip-up" data-aos-delay="550">
                     <div class="car-card">
-                        <img src="img/card-img/img10.jpg" alt="Ferrari">
+                        <div class="card-image">
+                            <img src="img/card-img/img10.jpg" alt="Ferrari">
+                            <div class="card-overlay">
+                                <span class="card-tag">Supercar</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Ferrari</h3>
-                            <p>Italian supercar legend synonymous with speed and prestige.</p>
+                            <p>Italian supercar legend synonymous with speed, prestige and racing heritage.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Italy</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 11 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 11 - Suzuki (Japanese) -->
+                <div class="col-lg-4 col-md-6" data-category="japanese" data-aos="flip-up" data-aos-delay="600">
                     <div class="car-card">
-                        <img src="img/card-img/img11.jpg" alt="Suzuki">
+                        <div class="card-image">
+                            <img src="img/card-img/img11.jpg" alt="Suzuki">
+                            <div class="card-overlay">
+                                <span class="card-tag">Compact</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Suzuki</h3>
-                            <p>Compact, efficient and reliable vehicles loved worldwide.</p>
+                            <p>Compact, efficient and reliable vehicles loved worldwide for their practicality.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Japan</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 12 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 12 - GMC (American) -->
+                <div class="col-lg-4 col-md-6" data-category="american" data-aos="flip-up" data-aos-delay="650">
                     <div class="car-card">
-                        <img src="img/card-img/img12.jpg" alt="GMC">
+                        <div class="card-image">
+                            <img src="img/card-img/img12.jpg" alt="GMC">
+                            <div class="card-overlay">
+                                <span class="card-tag">Tough</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>GMC</h3>
-                            <p>Premium trucks and SUVs built with American strength.</p>
+                            <p>Premium trucks and SUVs built with American strength, capability and durability.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> USA</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 13 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 13 - Audi (Performance) -->
+                <div class="col-lg-4 col-md-6" data-category="performance" data-aos="flip-up" data-aos-delay="700">
                     <div class="car-card">
-                        <img src="img/card-img/img13.jpg" alt="Audi">
+                        <div class="card-image">
+                            <img src="img/card-img/img13.jpg" alt="Audi">
+                            <div class="card-overlay">
+                                <span class="card-tag">Progressive</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Audi</h3>
-                            <p>Progressive luxury with advanced German engineering.</p>
+                            <p>Progressive luxury with advanced German engineering and quattro all-wheel drive.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Germany</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 14 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 14 - Lamborghini (Supercar) -->
+                <div class="col-lg-4 col-md-6" data-category="supercar" data-aos="flip-up" data-aos-delay="750">
                     <div class="car-card">
-                        <img src="img/card-img/img14.jpg" alt="Lamborghini">
+                        <div class="card-image">
+                            <img src="img/card-img/img14.jpg" alt="Lamborghini">
+                            <div class="card-overlay">
+                                <span class="card-tag">Extreme</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Lamborghini</h3>
-                            <p>Extreme performance and breathtaking Italian design.</p>
+                            <p>Extreme performance and breathtaking Italian design that defines the supercar world.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> Italy</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 15 -->
-                <div class="col-lg-4 col-md-6">
+                <!-- Card 15 - Bentley (Luxury) -->
+                <div class="col-lg-4 col-md-6" data-category="luxury" data-aos="flip-up" data-aos-delay="800">
                     <div class="car-card">
-                        <img src="img/card-img/img15.jpg" alt="Bentley">
+                        <div class="card-image">
+                            <img src="img/card-img/img15.jpg" alt="Bentley">
+                            <div class="card-overlay">
+                                <span class="card-tag">Handcrafted</span>
+                            </div>
+                        </div>
                         <div class="card-content">
                             <h3>Bentley</h3>
-                            <p>British handcrafted luxury and unmatched refinement.</p>
+                            <p>British handcrafted luxury and unmatched refinement for the world's elite.</p>
+                            <div class="card-footer">
+                                <span class="card-country"><i class="fas fa-map-marker-alt"></i> United Kingdom</span>
+                                <a href="#" class="btn-explore-card">Explore <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
 
+            <!-- Load More Button -->
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="100">
+                <button class="btn-load-more" id="loadMoreBtn">
+                    <i class="fas fa-plus-circle"></i> Load More Cars
+                </button>
+            </div>
+
         </div>
 
     </section>
 
-    <section class="fastest-cars-section">
+    <!-- ========================================== -->
+    <!-- FASTEST CARS SECTION -->
+    <!-- ========================================== -->
+    <section class="fastest-cars-section" data-aos="fade-up">
 
         <div class="container">
 
-            <h2 class="fastest-title">
-                Top Fastest Cars In The World
-            </h2>
-
-            <p class="fastest-subtitle">
-                Engineering masterpieces built for ultimate speed.
-            </p>
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+                <span class="section-tag">⚡ Speed Kings</span>
+                <h2 class="fastest-title">
+                    Fastest Cars <span>On Earth</span>
+                </h2>
+                <p class="fastest-subtitle">
+                    Engineering masterpieces built for ultimate speed and performance.
+                </p>
+                <div class="header-divider"></div>
+            </div>
 
             <div class="fastest-grid">
 
-                <div class="fastest-card">
-                    <span>#1</span>
+                <div class="fastest-card" data-aos="flip-up" data-aos-delay="100">
+                    <span class="rank">#1</span>
+                    <div class="fastest-icon"><i class="fas fa-rocket"></i></div>
                     <h3>Koenigsegg Jesko Absolut</h3>
-                    <p>Estimated Top Speed: 531+ km/h</p>
+                    <p>Estimated Top Speed: <strong>531+ km/h</strong></p>
+                    <div class="fastest-detail">
+                        <span><i class="fas fa-tachometer-alt"></i> 1,600 HP</span>
+                        <span><i class="fas fa-clock"></i> 0-60: 2.5s</span>
+                    </div>
                 </div>
 
-                <div class="fastest-card">
-                    <span>#2</span>
+                <div class="fastest-card" data-aos="flip-up" data-aos-delay="200">
+                    <span class="rank">#2</span>
+                    <div class="fastest-icon"><i class="fas fa-bolt"></i></div>
                     <h3>Bugatti Chiron Super Sport 300+</h3>
-                    <p>Top Speed: 490 km/h</p>
+                    <p>Top Speed: <strong>490 km/h</strong></p>
+                    <div class="fastest-detail">
+                        <span><i class="fas fa-tachometer-alt"></i> 1,578 HP</span>
+                        <span><i class="fas fa-clock"></i> 0-60: 2.4s</span>
+                    </div>
                 </div>
 
-                <div class="fastest-card">
-                    <span>#3</span>
+                <div class="fastest-card" data-aos="flip-up" data-aos-delay="300">
+                    <span class="rank">#3</span>
+                    <div class="fastest-icon"><i class="fas fa-car"></i></div>
                     <h3>SSC Tuatara</h3>
-                    <p>Top Speed: 474 km/h</p>
+                    <p>Top Speed: <strong>474 km/h</strong></p>
+                    <div class="fastest-detail">
+                        <span><i class="fas fa-tachometer-alt"></i> 1,750 HP</span>
+                        <span><i class="fas fa-clock"></i> 0-60: 2.5s</span>
+                    </div>
                 </div>
 
-                <div class="fastest-card">
-                    <span>#4</span>
+                <div class="fastest-card" data-aos="flip-up" data-aos-delay="400">
+                    <span class="rank">#4</span>
+                    <div class="fastest-icon"><i class="fas fa-fire"></i></div>
                     <h3>Hennessey Venom F5</h3>
-                    <p>Top Speed: 437+ km/h</p>
+                    <p>Top Speed: <strong>437+ km/h</strong></p>
+                    <div class="fastest-detail">
+                        <span><i class="fas fa-tachometer-alt"></i> 1,817 HP</span>
+                        <span><i class="fas fa-clock"></i> 0-60: 2.6s</span>
+                    </div>
                 </div>
 
             </div>
@@ -248,7 +440,245 @@
 
     </section>
 
+    <!-- ========================================== -->
+    <!-- STATS COUNTER SECTION (NEW) -->
+    <!-- ========================================== -->
+    <section class="stats-counter-section" data-aos="fade-up">
+        <div class="container">
+            <div class="stats-counter-grid">
+                <div class="stat-counter-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number" data-count="500">0</div>
+                    <span class="stat-label">Premium Cars</span>
+                </div>
+                <div class="stat-counter-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number" data-count="40">0</div>
+                    <span class="stat-label">Global Brands</span>
+                </div>
+                <div class="stat-counter-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number" data-count="15">0</div>
+                    <span class="stat-label">Luxury Brands</span>
+                </div>
+                <div class="stat-counter-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-number" data-count="100">0</div>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- BRAND SHOWCASE SECTION (NEW) -->
+    <!-- ========================================== -->
+    <section class="brand-showcase-section" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+                <span class="section-tag">★ Brand Showcase</span>
+                <h2 class="showcase-title">
+                    Iconic <span>Automotive</span> Brands
+                </h2>
+                <p class="showcase-subtitle">
+                    Discover the legends that have shaped the automotive world.
+                </p>
+                <div class="header-divider"></div>
+            </div>
+
+            <div class="brand-logos-grid" data-aos="fade-up" data-aos-delay="150">
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-car"></i>
+                    <span>BMW</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="120">
+                    <i class="fas fa-car"></i>
+                    <span>Audi</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="140">
+                    <i class="fas fa-car"></i>
+                    <span>Mercedes</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="160">
+                    <i class="fas fa-car"></i>
+                    <span>Porsche</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="180">
+                    <i class="fas fa-car"></i>
+                    <span>Ferrari</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-car"></i>
+                    <span>Lamborghini</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="220">
+                    <i class="fas fa-car"></i>
+                    <span>Bugatti</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="240">
+                    <i class="fas fa-car"></i>
+                    <span>Rolls-Royce</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="260">
+                    <i class="fas fa-car"></i>
+                    <span>Bentley</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="280">
+                    <i class="fas fa-car"></i>
+                    <span>Maserati</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-car"></i>
+                    <span>Aston Martin</span>
+                </div>
+                <div class="brand-logo-item" data-aos="zoom-in" data-aos-delay="320">
+                    <i class="fas fa-car"></i>
+                    <span>McLaren</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- BACK TO HOME BUTTON -->
+    <!-- ========================================== -->
+    <a href="../index.html" class="back-home-btn" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Home</span>
+    </a>
+
+    <!-- ========================================== -->
+    <!-- SCRIPTS -->
+    <!-- ========================================== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            offset: 80
+        });
+        // ... বাকি JS কোড
+    </script>
+
+    <!-- ========================================== -->
+    <!-- SCRIPTS -->
+    <!-- ========================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            offset: 80
+        });
+
+        // ---------- FILTER BUTTONS ----------
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const carCards = document.querySelectorAll('.car-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                carCards.forEach(card => {
+                    const parent = card.closest('.col-lg-4');
+                    if (filterValue === 'all' || parent.getAttribute('data-category') === filterValue) {
+                        parent.style.display = 'block';
+                        setTimeout(() => {
+                            parent.style.opacity = '1';
+                            parent.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        parent.style.opacity = '0';
+                        parent.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            parent.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // ---------- LOAD MORE BUTTON ----------
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        let visibleCards = 9;
+        const totalCards = document.querySelectorAll('#carGrid .col-lg-4').length;
+
+        // Initially hide cards after 9
+        document.querySelectorAll('#carGrid .col-lg-4').forEach((card, index) => {
+            if (index >= 9) {
+                card.style.display = 'none';
+            }
+        });
+
+        loadMoreBtn.addEventListener('click', function () {
+            const cards = document.querySelectorAll('#carGrid .col-lg-4');
+            let newVisible = visibleCards + 6;
+
+            cards.forEach((card, index) => {
+                if (index >= visibleCards && index < newVisible && index < totalCards) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 100);
+                }
+            });
+
+            visibleCards = Math.min(newVisible, totalCards);
+
+            if (visibleCards >= totalCards) {
+                this.style.display = 'none';
+            }
+        });
+
+        // ---------- STATS COUNTER ----------
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let countersStarted = false;
+        const statsSection = document.querySelector('.stats-counter-section');
+
+        function startCounters() {
+            if (countersStarted) return;
+            countersStarted = true;
+
+            statNumbers.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                let count = 0;
+                const speed = 120;
+
+                const updateCount = () => {
+                    const inc = Math.ceil(target / speed);
+                    if (count < target) {
+                        count = Math.min(count + inc, target);
+                        counter.innerText = count;
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target + '+';
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounters();
+                        observer.unobserve(statsSection);
+                    }
+                });
+            }, { threshold: 0.2 });
+            observer.observe(statsSection);
+        } else {
+            setTimeout(startCounters, 800);
+        }
+    </script>
 
 </body>
 
