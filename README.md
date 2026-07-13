@@ -1,19 +1,19 @@
-Velocita Moto — Premium Automotive Website
-📌 Project Overview
-A premium automotive showcase website featuring luxury cars, brand directories, interactive galleries, and immersive media — built with modern web technologies.
+🏎️ Velocita Moto — Premium Automotive Website
 
-🚀 Live Demo
-🔗 URL: velocitamoto.com
+📌 Project Overview
+Velocita Moto is a premium automotive showcase website that brings together luxury cars, brand directories, interactive galleries, and immersive media. Built with modern web technologies, it delivers a stunning visual experience for car enthusiasts worldwide.
+
+🔗 Live Demo
+🌐 URL: [velocitamoto.com](https://velocita-moto.vercel.app/)
 
 📁 Project Structure
-text
 velocita-moto/
 │
-├── index.html                          # Main landing page
-├── car-collection/
-│   └── car-collection.html             # Car gallery page
+├── 📄 index.html                          # Main landing page
+├── 📄 car-collection/
+│   └── car-collection.html                # Car gallery page
 │
-├── luxuryCar/                          # Individual car pages (12+)
+├── 📁 luxuryCar/                          # Individual car pages (12+)
 │   ├── rolls-royce.html
 │   ├── bugatti.html
 │   ├── lamborghini.html
@@ -27,34 +27,36 @@ velocita-moto/
 │   ├── bmw.html
 │   └── audi.html
 │
-├── css/
-│   ├── style.css                       # Main styles
-│   ├── stylenavTesting.css             # Nav & hero styles
-│   └── style22.css                     # Collection styles
+├── 📁 css/
+│   ├── style.css                          # Main styles
+│   ├── stylenavTesting.css                # Nav & hero styles
+│   └── style22.css                        # Collection styles
 │
-├── js/
-│   └── script.js                       # Main JavaScript
+├── 📁 js/
+│   └── script.js                          # Main JavaScript
 │
-├── img/
-│   ├── Nav img/                        # Logo
-│   ├── carousel img/                   # 10 carousel images
-│   ├── showcase/                       # Luxury car images
-│   ├── card-img/                       # Collection card images
-│   ├── favicon_io/                     # Favicon package
-│   └── quote-bg.jpg                    # Quote background
+├── 📁 img/
+│   ├── Nav img/                           # Logo
+│   ├── carousel img/                      # 10 carousel images
+│   ├── showcase/                          # Luxury car images
+│   ├── card-img/                          # Collection card images
+│   ├── favicon_io/                        # Favicon package
+│   └── quote-bg.jpg                       # Quote background
 │
-├── video/
-│   ├── luxury-car.mp4                  # Banner video
-│   └── videosection.mp4                # Background video
+├── 📁 video/
+│   ├── luxury-car.mp4                     # Banner video
+│   └── videosection.mp4                   # Background video
 │
-└── README.md                           # This file
+└── 📄 README.md                           # This file
+
+
 🎨 Design Features
-Theme
-Dark Theme: Black/gold premium color scheme
-
-Night Mode: Toggle with localStorage persistence
-
-Smooth Transitions: All elements animate seamlessly
+🎭 Theme & Visual Identity
+Feature	Description
+Dark Theme	Premium black/gold color scheme
+Night Mode	Toggle with localStorage persistence
+Transitions	All elements animate seamlessly
+Typography	Luxury fonts for premium feel
 
 Color Palette
 Color	Hex	Usage
@@ -62,6 +64,8 @@ Gold	#c9a227	Accents, CTAs
 Black	#000000	Backgrounds
 Dark	#0a0a0a	Sections
 White	#ffffff	Text
+
+
 Typography
 Cormorant Garamond — Headings
 
