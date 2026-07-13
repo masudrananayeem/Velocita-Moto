@@ -301,7 +301,7 @@ Unauthorized copying, distribution, or use is strictly prohibited.
 
 <div align="center">
 
-**Built with ❤️ by Masud Rana Nayeem**
+**Build by Masud Rana Nayeem**
 
 *Velocita Moto © 2026*
 
