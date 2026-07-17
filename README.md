@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="img/Nav img/logo.png" alt="Velocita Moto Logo" width="220">
+
 # 🏎️ Velocita Moto
 
 ### Premium Automotive Showcase Website
@@ -11,6 +13,29 @@
 [![Made with](https://img.shields.io/badge/Made%20with-HTML%20%7C%20CSS%20%7C%20JS-c9a227?style=for-the-badge)]()
 
 </div>
+
+---
+
+## 📚 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Project Structure](#-project-structure)
+- [Design Features](#-design-features)
+- [Core Features](#-core-features)
+- [Technologies](#️-technologies)
+- [Responsive Breakpoints](#-responsive-breakpoints)
+- [Installation](#-installation)
+- [Pages](#-pages)
+- [Browser Support](#-browser-support)
+- [Planned Features](#-planned-features)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Developer](#-developer)
+- [Acknowledgments](#-acknowledgments)
+- [Stats](#-stats)
+- [Known Issues](#-known-issues)
+- [Support](#-support)
+- [Quick Links](#-quick-links)
 
 ---
 
